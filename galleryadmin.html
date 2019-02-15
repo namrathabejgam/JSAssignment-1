@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/galleryadmin.css" />
+  </head>
+  <body>
+    <div class="header">
+      <p>NAMRATHA BEJGAM</p>
+      <ul>
+        <li><a class="active" href="home.html">HOME</a></li>
+        <li><a href="about.html">ABOUT ME</a></li>
+        <li><a href="contact.html">CONTACT ME</a></li>
+        <li><a href="gallery1.html">MY GALLERY</a></li>
+        <li><a href="galleryadmin.html">GALLERY ADMIN</a></li>
+      </ul>
+    </div>
+    <div class="spacer">&nbsp;</div>
+    <!-- <img src="namratha.jpg" height="350px" width="320px" /> -->
+    <div class="AddImage"><button id="myButton">ADD IMAGE</button></div>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>IMAGE DETAILS</h2>
+        </div>
+        <div class="modal-body">
+          <form
+            name="imageForm"
+            action="galleryadmin.html"
+            onsubmit="addImage()"
+          >
+            <label for="url">IMAGE URL </label>
+            <input
+              type="text"
+              id="url"
+              name="url"
+              placeholder="Enter image url.."
+              style="margin-left:44px"
+            />
+            <br />
+            <label for="name">NAME </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter image name.."
+              style="margin-left:86px"
+            />
+            <br />
+            <label for="info">INFORMATION</label>
+            <input
+              type="text"
+              id="info"
+              name="info"
+              placeholder="Enter information about image.."
+              style="margin-left:22px"
+            />
+            <br />
+            <label for="info">UPLOADED DATE</label>
+            <input
+              type="text"
+              id="date"
+              name="date"
+              placeholder="Enter in dd/mm/yyyy format."
+              style="margin-left:0px"
+            />
+            <br />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="editModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="editClose">&times;</span>
+          <h2>IMAGE DETAILS</h2>
+        </div>
+        <div class="modal-body">
+          <form
+            name="editImageForm"
+            action="galleryadmin.html"
+            onsubmit="editImage()"
+          >
+            <label for="url">IMAGE URL </label>
+            <input
+              type="text"
+              id="editUrl"
+              name="url"
+              placeholder="image url.."
+              style="margin-left:44px"
+            />
+            <br />
+            <label for="name">NAME </label>
+            <input
+              type="text"
+              id="editName"
+              name="name"
+              placeholder="Your name.."
+              style="margin-left:86px"
+            />
+            <br />
+            <label for="info">INFORMATION</label>
+            <input
+              type="text"
+              id="editInfo"
+              name="info"
+              placeholder="Info.."
+              style="margin-left:22px"
+            />
+            <br />
+            <label for="date">UPLOADED DATE</label>
+            <input
+              type="text"
+              id="editDate"
+              name="date"
+              placeholder="Enter in dd/mm/yyyy format."
+              style="margin-left:0px"
+            />
+            <br />
+            <button id="delete" onclick="deleteImage()">DELETE</button>
+            <input type="submit" value="SAVE" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="showImages"></div>
+    <script type="text/javascript" src="./js/galleryadmin.js"></script>
+  </body>
+</html>

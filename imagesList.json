@@ -1,0 +1,25 @@
+{
+  "images": [
+    {
+      "id": 0,
+      "name": "My image",
+      "url": "namratha.jpg",
+      "info": "this is my image",
+      "date": "25/05/1998"
+    },
+    {
+      "id": 1,
+      "name": "My image2",
+      "url": "namratha.jpg",
+      "info": "this is my image1",
+      "date": "25/05/1998"
+    },
+    {
+      "id": 2,
+      "name": "My image3",
+      "url": "namratha.jpg",
+      "info": "this is my image2",
+      "date": "25/05/1998"
+    }
+  ]
+}

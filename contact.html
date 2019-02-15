@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/contact.css" />
+  </head>
+  <script>
+    function validateForm() {
+      var x = document.forms["myForm"]["name"].value;
+      if (x == "") {
+        alert("Please Enter a non-empty name");
+        return false;
+      }
+      var y = document.forms["myForm"]["email"].value;
+      if (y == "") {
+        alert("Please Enter a non-empty email address");
+        return false;
+      }
+
+      var regex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+      if (!regex.test(String(y).toLowerCase())) {
+        alert("Please Enter a valid email address");
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <body>
+    <div class="header">
+      <p>NAMRATHA BEJGAM</p>
+      <ul>
+        <li><a class="active" href="home.html">HOME</a></li>
+        <li><a href="about.html">ABOUT ME</a></li>
+        <li><a href="contact.html">CONTACT ME</a></li>
+        <li><a href="gallery1.html">MY GALLERY</a></li>
+        <li><a href="galleryadmin.html">GALLERY ADMIN</a></li>
+      </ul>
+    </div>
+    <div class="spacer">&nbsp;</div>
+    <div class="home">
+      <form
+        name="myForm"
+        action="contact.html"
+        onsubmit="return validateForm()"
+      >
+        <label for="name">NAME </label>
+        <input type="text" id="name" name="name" placeholder="Your name.." />
+        <br />
+        <label for="email">EMAIL</label>
+        <input type="text" id="email" name="email" placeholder="Your email.." />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
